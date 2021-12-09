@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Welcome to Longest Word!</h1>
+  <p class="rules">
+   Try to find the longest word with the letters above.
+  </p>
+  <p class="letters"><%= @letters %></p>
+  <p class="rules">
+    Please enter your word here:
+  </p>
+  <form action="/score">
+    <input type="hidden" name="time" value="<%=@startTime%>">
+    <input type="text" name="word" value="<%=params[:word]%>">
+    <button type="submit">Submit</button>
+  </form>
+</div>
